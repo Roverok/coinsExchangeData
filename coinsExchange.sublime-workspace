@@ -1,0 +1,508 @@
+{
+	"auto_complete":
+	{
+		"selected_items":
+		[
+			[
+				"get",
+				"getElementById"
+			],
+			[
+				"ca",
+				"cardsHtml"
+			],
+			[
+				"prot",
+				"prototype"
+			],
+			[
+				"templa",
+				"templateFunc"
+			],
+			[
+				"for",
+				"for	for (…) {…}"
+			],
+			[
+				"ans",
+				"answered"
+			],
+			[
+				"fi",
+				"filename"
+			],
+			[
+				"text",
+				"text-indent"
+			]
+		]
+	},
+	"buffers":
+	[
+		{
+			"file": "/home/eryoav/dev/phonegap/zohari/www/index.html",
+			"settings":
+			{
+				"buffer_size": 3249,
+				"line_ending": "Unix"
+			}
+		},
+		{
+			"file": "/home/eryoav/dev/phonegap/zohari/www/js/app.js",
+			"settings":
+			{
+				"buffer_size": 2451,
+				"line_ending": "Windows"
+			}
+		},
+		{
+			"file": "/home/eryoav/Downloads/JRIA_listings/serialization/Driver.java",
+			"settings":
+			{
+				"buffer_size": 8007,
+				"line_ending": "Windows"
+			}
+		},
+		{
+			"file": "/home/eryoav/Downloads/JRIA_listings/serialization/ZooOutput.extract",
+			"settings":
+			{
+				"buffer_size": 1563,
+				"line_ending": "Windows"
+			}
+		},
+		{
+			"file": "/home/eryoav/Downloads/JRIA_listings/serialization/ZooTest.java",
+			"settings":
+			{
+				"buffer_size": 743,
+				"line_ending": "Windows"
+			}
+		},
+		{
+			"file": "/home/eryoav/dev/cheat_sheet/certificate.txt",
+			"settings":
+			{
+				"buffer_size": 220,
+				"line_ending": "Unix"
+			}
+		}
+	],
+	"build_system": "",
+	"command_palette":
+	{
+		"height": 222.0,
+		"selected_items":
+		[
+			[
+				"html",
+				"Set Syntax: HTML"
+			],
+			[
+				"bash",
+				"Set Syntax: Shell Script (Bash)"
+			],
+			[
+				"pytho",
+				"Set Syntax: Python"
+			],
+			[
+				"ins",
+				"Package Control: Install Package"
+			]
+		],
+		"width": 575.0
+	},
+	"console":
+	{
+		"height": 132.0,
+		"history":
+		[
+			"import urllib.request,os,hashlib; h = '7183a2d3e96f11eeadd761d777e62404e330c659d4bb41d3bdf022e94cab3cd0'; pf = 'Package Control.sublime-package'; ipp = sublime.installed_packages_path(); urllib.request.install_opener( urllib.request.build_opener( urllib.request.ProxyHandler()) ); by = urllib.request.urlopen( 'http://sublime.wbond.net/' + pf.replace(' ', '%20')).read(); dh = hashlib.sha256(by).hexdigest(); print('Error validating download (got %s instead of %s), please try manual install' % (dh, h)) if dh != h else open(os.path.join( ipp, pf), 'wb' ).write(by)"
+		]
+	},
+	"distraction_free":
+	{
+		"menu_visible": true,
+		"show_minimap": false,
+		"show_open_files": false,
+		"show_tabs": false,
+		"side_bar_visible": false,
+		"status_bar_visible": false
+	},
+	"file_history":
+	[
+		"/home/eryoav/dev/workspace_sts/workspace/coinsExchange/src/main/webapp/static/js/services/heatMap.service.js",
+		"/media/My Passport/Coins Exchange/app/js/directives/heatmap/heatmap.directive.js",
+		"/home/eryoav/.cache/.fr-kYfA42/index.htm",
+		"/home/eryoav/.cache/.fr-UcgjcW/examples/column-rotated-labels/index.htm",
+		"/home/eryoav/dev/phonegap/memory-cards/index.html",
+		"/home/eryoav/dev/workspace_sts/workspace/coinsExchange/src/main/webapp/static/js/modules/main/controllers/main.controller.js",
+		"/home/eryoav/dev/workspace_sts/workspace/coinsExchange/src/main/webapp/static/js/modules/main/views/main.tpl.html",
+		"/home/eryoav/dev/workspace_sts/workspace/coinsExchange/src/main/webapp/static/js/modules/main/router.js",
+		"/home/eryoav/dev/workspace_sts/workspace/coinsExchange/src/main/webapp/index.jsp",
+		"/home/eryoav/dev/workspace_sts/workspace/coinsExchange/target/classes/jpaContext.xml",
+		"/home/eryoav/dev/workspace_sts/workspace/coinsExchange/src/main/java/dev/coinsExchange/service/ProviderService.java",
+		"/usr/lib/jvm/java-7-openjdk-i386/jre/lib/security/java.policy",
+		"/home/eryoav/.cache/.fr-5MrlEz/after/src/main/webapp/WEB-INF/jsp/getGoals.jsp",
+		"/home/eryoav/.cache/.fr-wwf9sR/after/pom.xml",
+		"/home/eryoav/.cache/.fr-2LlS40/after/src/main/webapp/WEB-INF/web.xml",
+		"/etc/java-7-openjdk/security/java.policy",
+		"/home/eryoav/.cache/.fr-Kpusfx/after/src/main/webapp/WEB-INF/jsp/addGoal.jsp",
+		"/home/eryoav/dev/workspace_sts/setup.txt",
+		"/home/eryoav/Desktop/*.btc-e.com",
+		"/home/eryoav/Desktop/installCert.java",
+		"/home/eryoav/Desktop/GoDaddyRootCertificateAuthority-G2",
+		"/home/eryoav/Desktop/mycert.crt",
+		"/home/eryoav/.cache/.fr-SF42iS/spring-mvc-task-scheduling-annotation/src/main/webapp/WEB-INF/applicationContext.xml",
+		"/home/eryoav/.cache/.fr-RTRBfy/spring-mvc-task-scheduling-annotation/src/main/webapp/WEB-INF/web.xml",
+		"/home/eryoav/.cache/.fr-SdOBiz/spring-mvc-task-scheduling-annotation/src/main/webapp/WEB-INF/spring-servlet.xml",
+		"/home/eryoav/.cache/.fr-GHV2IX/spring-mvc-task-scheduling-annotation/src/main/webapp/WEB-INF/spring-scheduler.xml",
+		"/home/eryoav/.cache/.fr-PeJ7Xt/after/src/main/webapp/WEB-INF/web.xml",
+		"/home/eryoav/.cache/.fr-TeMQ5M/after/pom.xml",
+		"/usr/lib/jvm/java-7-openjdk-i386/jre/lib/security/java.security",
+		"/home/eryoav/dev/cheat_sheet/tomcat/tomcat.txt",
+		"/media/My Passport/Yoav/css/sass.txt",
+		"/home/eryoav/Desktop/python/binary_tree",
+		"/home/eryoav/Desktop/python/script",
+		"/home/eryoav/Desktop/shell_scripting/sandbox",
+		"/home/eryoav/Desktop/workspace/server.js",
+		"/home/eryoav/Desktop/workspace/html5dp/table/index.html",
+		"/home/eryoav/Desktop/workspace/html5_games_by_example/memory-cards/game.css",
+		"/home/eryoav/Desktop/workspace/html5_games_by_example/memory-cards/style.css",
+		"/home/eryoav/Desktop/workspace/html5_games_by_example/memory-cards/index.html",
+		"/home/eryoav/Desktop/workspace/html5_games_by_example/memory-cards/game.js",
+		"/etc/udev/rules.d/51-android.rules",
+		"/home/eryoav/Desktop/python.py",
+		"/etc/enviroment",
+		"/home/eryoav/Desktop/pyfund/python.py",
+		"/var/www/sites/mobile_first/materials/before/baamstyles.css",
+		"/home/eryoav/Desktop/shell_scripting/script",
+		"/home/eryoav/Desktop/create_dir",
+		"/home/eryoav/Desktop/shell_scripting/reindert",
+		"/home/eryoav/Desktop/shell_scripting/temp",
+		"/home/eryoav/Desktop/workspace/html5_games_by_example/memory-cards/css3transition.css",
+		"/home/eryoav/Desktop/workspace/html5_games_by_example/css3transition.css",
+		"/home/eryoav/.config/sublime-text-3/Packages/User/Preferences.sublime-settings"
+	],
+	"find":
+	{
+		"height": 23.0
+	},
+	"find_in_files":
+	{
+		"height": 0.0,
+		"where_history":
+		[
+		]
+	},
+	"find_state":
+	{
+		"case_sensitive": false,
+		"find_history":
+		[
+			"ZET",
+			"zet",
+			"ppc_ltc",
+			"orders_1",
+			"table",
+			"loader",
+			"namespace",
+			"modules",
+			"\"",
+			"secondIndex",
+			"firstIndex",
+			"items",
+			"th",
+			"t",
+			"../"
+		],
+		"highlight": true,
+		"in_selection": false,
+		"preserve_case": false,
+		"regex": false,
+		"replace_history":
+		[
+		],
+		"reverse": false,
+		"show_context": true,
+		"use_buffer2": true,
+		"whole_word": false,
+		"wrap": true
+	},
+	"groups":
+	[
+		{
+			"selected": 5,
+			"sheets":
+			[
+				{
+					"buffer": 0,
+					"file": "/home/eryoav/dev/phonegap/zohari/www/index.html",
+					"semi_transient": false,
+					"settings":
+					{
+						"buffer_size": 3249,
+						"regions":
+						{
+						},
+						"selection":
+						[
+							[
+								0,
+								0
+							]
+						],
+						"settings":
+						{
+							"syntax": "Packages/HTML/HTML.tmLanguage"
+						},
+						"translation.x": 0.0,
+						"translation.y": 780.0,
+						"zoom_level": 1.0
+					},
+					"stack_index": 5,
+					"type": "text"
+				},
+				{
+					"buffer": 1,
+					"file": "/home/eryoav/dev/phonegap/zohari/www/js/app.js",
+					"semi_transient": false,
+					"settings":
+					{
+						"buffer_size": 2451,
+						"regions":
+						{
+						},
+						"selection":
+						[
+							[
+								0,
+								0
+							]
+						],
+						"settings":
+						{
+							"syntax": "Packages/JavaScript/JavaScript.tmLanguage",
+							"translate_tabs_to_spaces": false
+						},
+						"translation.x": 0.0,
+						"translation.y": 0.0,
+						"zoom_level": 1.0
+					},
+					"stack_index": 4,
+					"type": "text"
+				},
+				{
+					"buffer": 2,
+					"file": "/home/eryoav/Downloads/JRIA_listings/serialization/Driver.java",
+					"semi_transient": false,
+					"settings":
+					{
+						"buffer_size": 8007,
+						"regions":
+						{
+						},
+						"selection":
+						[
+							[
+								0,
+								0
+							]
+						],
+						"settings":
+						{
+							"syntax": "Packages/Java/Java.tmLanguage"
+						},
+						"translation.x": 0.0,
+						"translation.y": 0.0,
+						"zoom_level": 1.0
+					},
+					"stack_index": 3,
+					"type": "text"
+				},
+				{
+					"buffer": 3,
+					"file": "/home/eryoav/Downloads/JRIA_listings/serialization/ZooOutput.extract",
+					"semi_transient": false,
+					"settings":
+					{
+						"buffer_size": 1563,
+						"regions":
+						{
+						},
+						"selection":
+						[
+							[
+								0,
+								0
+							]
+						],
+						"settings":
+						{
+							"syntax": "Packages/XML/XML.tmLanguage"
+						},
+						"translation.x": 0.0,
+						"translation.y": 0.0,
+						"zoom_level": 1.0
+					},
+					"stack_index": 2,
+					"type": "text"
+				},
+				{
+					"buffer": 4,
+					"file": "/home/eryoav/Downloads/JRIA_listings/serialization/ZooTest.java",
+					"semi_transient": false,
+					"settings":
+					{
+						"buffer_size": 743,
+						"regions":
+						{
+						},
+						"selection":
+						[
+							[
+								0,
+								0
+							]
+						],
+						"settings":
+						{
+							"syntax": "Packages/Java/Java.tmLanguage"
+						},
+						"translation.x": 0.0,
+						"translation.y": 0.0,
+						"zoom_level": 1.0
+					},
+					"stack_index": 1,
+					"type": "text"
+				},
+				{
+					"buffer": 5,
+					"file": "/home/eryoav/dev/cheat_sheet/certificate.txt",
+					"semi_transient": false,
+					"settings":
+					{
+						"buffer_size": 220,
+						"regions":
+						{
+						},
+						"selection":
+						[
+							[
+								11,
+								11
+							]
+						],
+						"settings":
+						{
+							"syntax": "Packages/Text/Plain text.tmLanguage"
+						},
+						"translation.x": 0.0,
+						"translation.y": 0.0,
+						"zoom_level": 1.0
+					},
+					"stack_index": 0,
+					"type": "text"
+				}
+			]
+		}
+	],
+	"incremental_find":
+	{
+		"height": 23.0
+	},
+	"input":
+	{
+		"height": 32.0
+	},
+	"layout":
+	{
+		"cells":
+		[
+			[
+				0,
+				0,
+				1,
+				1
+			]
+		],
+		"cols":
+		[
+			0.0,
+			1.0
+		],
+		"rows":
+		[
+			0.0,
+			1.0
+		]
+	},
+	"menu_visible": true,
+	"output.find_results":
+	{
+		"height": 0.0
+	},
+	"project": "coinsExchange.sublime-project",
+	"replace":
+	{
+		"height": 42.0
+	},
+	"save_all_on_build": true,
+	"select_file":
+	{
+		"height": 0.0,
+		"selected_items":
+		[
+			[
+				"index",
+				"src/main/webapp/index.jsp"
+			],
+			[
+				"app",
+				"app/app.js"
+			],
+			[
+				"ap",
+				"appCtrl.js"
+			],
+			[
+				"abo",
+				"js/modules/about/aboutCtrl.js"
+			],
+			[
+				"",
+				"index.html"
+			]
+		],
+		"width": 0.0
+	},
+	"select_project":
+	{
+		"height": 500.0,
+		"selected_items":
+		[
+		],
+		"width": 380.0
+	},
+	"select_symbol":
+	{
+		"height": 0.0,
+		"selected_items":
+		[
+		],
+		"width": 0.0
+	},
+	"settings":
+	{
+	},
+	"show_minimap": true,
+	"show_open_files": false,
+	"show_tabs": true,
+	"side_bar_visible": true,
+	"side_bar_width": 269.0,
+	"status_bar_visible": true,
+	"template_settings":
+	{
+	}
+}

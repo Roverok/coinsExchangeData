@@ -1,0 +1,33 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<beans:beans xmlns:beans="http://www.springframework.org/schema/beans"
+	xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+	xmlns:context="http://www.springframework.org/schema/context"
+	xmlns:p="http://www.springframework.org/schema/p"
+	xmlns="http://www.springframework.org/schema/security"
+	xsi:schemaLocation="http://www.springframework.org/schema/beans 
+	http://www.springframework.org/schema/beans/spring-beans.xsd
+		http://www.springframework.org/schema/context 
+		http://www.springframework.org/schema/context/spring-context-4.0.xsd
+		http://www.springframework.org/schema/security 
+		http://www.springframework.org/schema/security/spring-security.xsd">
+	
+	<http auto-config="true" use-expressions="true">
+		<!-- <intercept-url pattern="/login.html" access="permitAll"/>  -->
+		<intercept-url pattern="/loginFailed.html" access="permitAll" />
+		<intercept-url pattern="/logout.html" access="permitAll" />
+		<intercept-url pattern="/403.html" access="permitAll" />
+		<intercept-url pattern="/**" access="hasRole('ROLE_USER')"/>
+		<!-- <form-login login-page="/login.html" authentication-failure-url="/loginFailed.html"/> -->
+		<form-login authentication-failure-url="/loginFailed.html"/>
+		<logout logout-success-url="/logout.html"/>
+		<access-denied-handler error-page="/403.html"/>
+	</http>
+	
+	<!-- defined in jpaContext.xml -->
+	<authentication-manager>
+		<authentication-provider user-service-ref="userDetailsService">
+			<password-encoder hash="bcrypt" />
+		</authentication-provider>
+	</authentication-manager>
+
+</beans:beans>

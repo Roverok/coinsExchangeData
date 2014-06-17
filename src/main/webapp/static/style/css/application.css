@@ -1,0 +1,73 @@
+body {
+  padding-top: 50px;
+}
+.starter-template {
+  padding: 40px 15px;
+}
+#cx-table {
+	border: 1px solid #ddd;
+	overflow: hidden;
+	margin: auto;
+}
+.cx-table-row {
+	width: 100%;
+	height: 40px;
+	float: left;
+}
+.cx-table-row > div {
+	width: 10%;
+	height: 100%;
+	float: left;
+	border-right: 1px solid #ddd;	
+	border-bottom: 1px solid #ddd;	
+}
+.cx-table-row > div:last-child {	
+	border-top: 1px solid #ddd;	
+}
+.cx-table-row:first-child > div {
+	border-top: none;
+}
+.cx-table-row:last-child > div {
+	border-bottom: none;
+}
+.cx-table-row:last-child > div:last-child {
+	border-right: none;
+}
+.cx-pair {
+	height: 100%;
+}
+.cx-pair-name, .cx-pair-last-traded-price {
+	height: 50%;
+	margin: auto;
+	text-align: center;
+	font-size: .8em;
+	cursor: pointer;
+}
+.cx-pair-name {
+	padding: 5px;
+}
+.cx-chart {
+	margin-top: 40px;
+}
+.cx-orders {
+	float: left;
+	width: 50%;
+	padding: 10px;
+	margin: 0;
+	border: 1px solid #ccc;
+}
+.cx-orders ul {
+	height: 400px;
+	list-style-type: none;
+	overflow-y: scroll;
+	padding: 0;
+}
+.cx-orders > span {
+	font-weight: bold;
+	padding: .5em;
+}
+.cx-orders span {
+	display: inline-block;
+	width: 90px;
+}
+

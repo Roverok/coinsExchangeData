@@ -1,0 +1,26 @@
+<div>
+	<div class="cx-orders">	
+		<span>Price</span> 
+		<span>BTC</span> 
+		<span>USD</span>
+		<ul>
+			<li ng-repeat="buy in ordersData.buy">
+				<span>{{buy.price}}</span> |
+				<span>{{buy.coin1}}</span> |
+				<span>{{buy.coin2}}</span>
+			</li>	 
+		</ul>
+	</div>
+	<div class="cx-orders">
+		<span>Price</span> 
+		<span>BTC</span>
+		<span>USD</span>	
+		<ul>
+			<li ng-repeat="sell in ordersData.sell">
+				<span>{{sell.price}}</span> |
+				<span>{{sell.coin1}}</span> |
+				<span>{{sell.coin2}}</span>
+			</li>	 
+		</ul>
+	</div>	
+</div>
