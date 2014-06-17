@@ -1,0 +1,196 @@
+/* 
+mysql db_name < text_file 
+mysql < text_file
+source file_name
+\. file_name
+*/
+
+SET FOREIGN_KEY_CHECKS=0;
+
+DROP TABLE IF EXISTS hibernate_sequences;
+CREATE TABLE `hibernate_sequences` (
+  `sequence_name` varchar(255) DEFAULT NULL,
+  `sequence_next_hi_value` int(11) DEFAULT NULL
+);
+
+DROP TABLE IF EXISTS abstractOrder;
+CREATE TABLE `abstractOrder` (
+  `ID` bigint(20) NOT NULL,
+  `COIN1` double DEFAULT NULL,
+  `COIN2` double DEFAULT NULL,
+  `DATE` date DEFAULT NULL,
+  `PRICE` double DEFAULT NULL,
+  PRIMARY KEY (`ID`)
+);
+
+DROP TABLE IF EXISTS sell_order;
+CREATE TABLE `sell_order` (
+  `ID` bigint(20) NOT NULL,
+  `COIN1` double DEFAULT NULL,
+  `COIN2` double DEFAULT NULL,
+  `DATE` date DEFAULT NULL,
+  `PRICE` double DEFAULT NULL,
+  PRIMARY KEY (`ID`)
+);
+
+DROP TABLE IF EXISTS buy_order;
+CREATE TABLE `buy_order` (
+  `ID` bigint(20) NOT NULL,
+  `COIN1` double DEFAULT NULL,
+  `COIN2` double DEFAULT NULL,
+  `DATE` date DEFAULT NULL,
+  `PRICE` double DEFAULT NULL,
+  PRIMARY KEY (`ID`)
+);
+
+DROP TABLE IF EXISTS pairs;
+CREATE TABLE pairs (
+  ID int(11) NOT NULL AUTO_INCREMENT,
+  COIN_1_ID int(11) DEFAULT NULL,
+  COIN_2_ID int(11) DEFAULT NULL,
+  NAME varchar(255) DEFAULT NULL,
+  SYMBOL varchar(255) DEFAULT NULL,
+  PRIMARY KEY (ID)
+); 
+
+DROP TABLE IF EXISTS pairs_aggregated;
+CREATE TABLE `pairs_aggregated` (
+  `ID` int(11) NOT NULL AUTO_INCREMENT,
+  `DATE` date DEFAULT NULL,
+  `LAST_TRADE_PRICE_AVG` double DEFAULT NULL,
+  `VOLUME_AVG` double DEFAULT NULL,
+  `PAIR_ID` int(11) NOT NULL,
+  PRIMARY KEY (`ID`),
+  KEY `fk_pair_id` (`PAIR_ID`),
+  CONSTRAINT `fk_pairs_aggregated_pairs_pair_id` FOREIGN KEY (`PAIR_ID`) REFERENCES `pairs` (`ID`)
+); 
+
+DROP TABLE IF EXISTS user;
+CREATE TABLE `users` (
+  `USER_ID` bigint(20) NOT NULL AUTO_INCREMENT,
+  `name` varchar(255) NOT NULL,
+  `password` varchar(255) NOT NULL,
+  PRIMARY KEY (`USER_ID`),
+  UNIQUE KEY `uq_name` (`name`)
+);
+
+DROP TABLE IF EXISTS user_authority;
+CREATE TABLE `user_authority` (
+  `USER_ID` bigint(20) NOT NULL,
+  `AUTHORITY_ID` bigint(20) NOT NULL,
+  PRIMARY KEY (`USER_ID`,`AUTHORITY_ID`),
+  KEY `fk_authority_id` (`AUTHORITY_ID`),
+  CONSTRAINT `fk_user_authority_user_user_id` FOREIGN KEY (`USER_ID`) REFERENCES `user` (`USER_ID`),
+  CONSTRAINT `fk_user_authority_authority_authority_id` FOREIGN KEY (`AUTHORITY_ID`) REFERENCES `authority` (`AUTHORITY_ID`)
+);
+
+DROP TABLE IF EXISTS authority;
+CREATE TABLE `authority` (
+  `AUTHORITY_ID` bigint(20) NOT NULL AUTO_INCREMENT,
+  `name` varchar(255) NOT NULL,
+  PRIMARY KEY (`AUTHORITY_ID`),
+  UNIQUE KEY `uk_name` (`name`)
+);
+
+DROP TABLE IF EXISTS btc_e;
+CREATE TABLE `btc_e` (
+  `ID` bigint(20) NOT NULL AUTO_INCREMENT,
+  `AVG` double DEFAULT NULL,
+  `BUY` double DEFAULT NULL,
+  `DATE` date DEFAULT NULL,
+  `HIGH` double DEFAULT NULL,
+  `LAST` double DEFAULT NULL,
+  `LOW` double DEFAULT NULL,
+  `SELL` double DEFAULT NULL,
+  `SERVER_TIME` int(11) DEFAULT NULL,
+  `UPDATED` int(11) DEFAULT NULL,
+  `VOL` double DEFAULT NULL,
+  `VOL_CUR` double DEFAULT NULL,
+  `PAIR_ID` int(11) NOT NULL,
+  PRIMARY KEY (`ID`),
+  KEY `fk_pair_id` (`PAIR_ID`),
+  CONSTRAINT `fk_btc_e_pairs_id` FOREIGN KEY (`PAIR_ID`) REFERENCES `pairs` (`ID`)
+);
+
+DROP TABLE IF EXISTS bter;
+CREATE TABLE `bter` (
+  `ID` int(11) NOT NULL AUTO_INCREMENT,
+  `AVG` double DEFAULT NULL,
+  `BUY` double DEFAULT NULL,
+  `DATE` date DEFAULT NULL,
+  `HIGH` double DEFAULT NULL,
+  `LAST` double DEFAULT NULL,
+  `LOW` double DEFAULT NULL,
+  `SELL` double DEFAULT NULL,
+  `VOL_BQC` double DEFAULT NULL,
+  `VOL_BTC` double DEFAULT NULL,
+  `PAIR_ID` int(11) NOT NULL,
+  PRIMARY KEY (`ID`),
+  KEY `fk_pair_id` (`PAIR_ID`),
+  CONSTRAINT `fk_bter_pairs_id` FOREIGN KEY (`PAIR_ID`) REFERENCES `pairs` (`ID`)
+);
+
+DROP TABLE IF EXISTS cryptsy;
+CREATE TABLE `cryptsy` (
+  `ID` bigint(20) NOT NULL AUTO_INCREMENT,
+  `DATE` date DEFAULT NULL,
+  `LABEL` varchar(255) DEFAULT NULL,
+  `LAST_TRADE_PRICE` double DEFAULT NULL,
+  `LAST_TRADE_TIME` varchar(255) DEFAULT NULL,
+  `MARKET_ID` int(11) DEFAULT NULL,
+  `PRIMARY_CODE` varchar(255) DEFAULT NULL,
+  `PRIMARY_NAME` varchar(255) DEFAULT NULL,
+  `SECONDARY_NAME` varchar(255) DEFAULT NULL,
+  `VOLUME` double DEFAULT NULL,
+  `PAIR_ID` int(11) NOT NULL,
+  PRIMARY KEY (`ID`),
+  KEY `fk_pair_id` (`PAIR_ID`),
+  CONSTRAINT `fk_cryptsy_pairs_id` FOREIGN KEY (`PAIR_ID`) REFERENCES `pairs` (`ID`)
+);
+
+DROP TABLE IF EXISTS mint_pal;
+CREATE TABLE `mint_pal` (
+  `ID` bigint(20) NOT NULL AUTO_INCREMENT,
+  `_24H_HIGH` double DEFAULT NULL,
+  `_24H_LOW` double DEFAULT NULL,
+  `_24H_VOL` double DEFAULT NULL,
+  `_CHANGE` varchar(255) DEFAULT NULL,
+  `CODE` varchar(255) DEFAULT NULL,
+  `DATE` date DEFAULT NULL,
+  `EXCHANGE` varchar(255) DEFAULT NULL,
+  `LAST_PRICE` double DEFAULT NULL,
+  `MARKET_ID` int(11) DEFAULT NULL,
+  `TOP_ASK` double DEFAULT NULL,
+  `TOP_BID` double DEFAULT NULL,
+  `YESTERDAY_PRICE` double DEFAULT NULL,
+  `PAIR_ID` int(11) NOT NULL,
+  PRIMARY KEY (`ID`),
+  KEY `fk_pair_id` (`PAIR_ID`),
+  CONSTRAINT `fk_mint_pal_pairs_id` FOREIGN KEY (`PAIR_ID`) REFERENCES `pairs` (`ID`)
+); 
+
+DROP TABLE IF EXISTS poloniex;
+CREATE TABLE `poloniex` (
+  `ID` bigint(20) NOT NULL AUTO_INCREMENT,
+  `BASE_VOLUME` double DEFAULT NULL,
+  `DATE` date DEFAULT NULL,
+  `HIGHEST_BID` double DEFAULT NULL,
+  `IS_FROZEN` int(11) DEFAULT NULL,
+  `LAST` double DEFAULT NULL,
+  `LOWEST_ASK` double DEFAULT NULL,
+  `PERCENT_CHANGE` double DEFAULT NULL,
+  `QUOTE_VOLUME` double DEFAULT NULL,
+  `PAIR_ID` int(11) NOT NULL,
+  PRIMARY KEY (`ID`),
+  KEY `fk_pair_id` (`PAIR_ID`),
+  CONSTRAINT `fk_fcexs2qhaf1wi3x2ol0j205pu` FOREIGN KEY (`PAIR_ID`) REFERENCES `pairs` (`ID`)
+);
+
+SET FOREIGN_KEY_CHECKS=1;
+
+INSERT INTO 
+	pairs 
+		(COIN_1_ID, COIN_2_ID, NAME, SYMBOL) 
+VALUES 
+	(1,2,'a','b'),
+	(3,4,'c','d');  
