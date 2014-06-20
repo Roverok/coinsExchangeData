@@ -23,11 +23,11 @@ import com.coinsExchangeData.model.MarketsResourcesManager;
 import com.coinsExchangeData.model.PairAggregatedModel;
 import com.coinsExchangeData.model.PairModel;
 import com.coinsExchangeData.repository.IPairAggregatedRepository;
-import com.coinsExchangeData.task.BtcEPairsTask;
-import com.coinsExchangeData.task.BterPairsTask;
-import com.coinsExchangeData.task.CryptsyPairsTask;
-import com.coinsExchangeData.task.MintPalPairsTask;
-import com.coinsExchangeData.task.PoloniexPairsTask;
+import com.coinsExchangeData.task.pair.BtcEPairsTask;
+import com.coinsExchangeData.task.pair.BterPairsTask;
+import com.coinsExchangeData.task.pair.CryptsyPairsTask;
+import com.coinsExchangeData.task.pair.MintPalPairsTask;
+import com.coinsExchangeData.task.pair.PoloniexPairsTask;
 
 @Service("pairsService")
 public class PairsServiceImpl implements IPairsService{

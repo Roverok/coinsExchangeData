@@ -37,7 +37,7 @@ public class TaskController {
 	
 	@RequestMapping(value="orderbook", method = RequestMethod.GET) 
 	public String orderbook() {
-//		orderBookService.fetch();
+		orderBookService.fetch();
 		return "fetch";
 	}
 	

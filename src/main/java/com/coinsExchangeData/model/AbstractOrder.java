@@ -2,6 +2,7 @@ package com.coinsExchangeData.model;
 
 import java.util.Date;
 
+import javax.persistence.CascadeType;
 import javax.persistence.Column;
 import javax.persistence.Entity;
 import javax.persistence.GeneratedValue;
@@ -9,6 +10,8 @@ import javax.persistence.GenerationType;
 import javax.persistence.Id;
 import javax.persistence.Inheritance;
 import javax.persistence.InheritanceType;
+import javax.persistence.JoinColumn;
+import javax.persistence.ManyToOne;
 import javax.persistence.Table;
 import javax.persistence.Temporal;
 import javax.persistence.TemporalType;
@@ -27,6 +30,18 @@ public class AbstractOrder {
 	@Column(name="DATE")
 	protected Date date = new Date();
 	
+	@ManyToOne(cascade = CascadeType.MERGE)
+	@JoinColumn(name="PROVIDER_ID", nullable=false)
+	protected ProviderModel provider;
+	
+	public ProviderModel getProvider() {
+		return provider;
+	}
+
+	public void setProvider(ProviderModel provider) {
+		this.provider = provider;
+	}
+
 	@Column(name = "PRICE")
 	protected double price;
 	

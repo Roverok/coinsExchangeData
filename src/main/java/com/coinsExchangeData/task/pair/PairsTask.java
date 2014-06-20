@@ -1,4 +1,4 @@
-package com.coinsExchangeData.task;
+package com.coinsExchangeData.task.pair;
 
 import java.util.List;
 

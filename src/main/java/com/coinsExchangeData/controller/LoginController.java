@@ -9,7 +9,7 @@ public class LoginController {
 	
 	@RequestMapping(value="login", method=RequestMethod.GET)
 	public String login() {
-		System.out.println("Inside login method");
+		//System.out.println("Inside login method");
 		return "login";
 	}
 	

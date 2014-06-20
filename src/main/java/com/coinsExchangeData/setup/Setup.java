@@ -5,16 +5,22 @@ import org.springframework.context.ApplicationListener;
 import org.springframework.context.event.ContextRefreshedEvent;
 import org.springframework.stereotype.Component;
 
-import com.coinsExchangeData.bean.PairsManager;
+import com.coinsExchangeData.bean.PairManager;
+import com.coinsExchangeData.bean.ProviderManager;
 
 @Component
 public class Setup implements ApplicationListener<ContextRefreshedEvent> {
 	
 	@Autowired
-	private PairsManager pairsManager;
+	private PairManager pairManager;
+	@Autowired
+	private ProviderManager providerManager;
 
 	public void onApplicationEvent(ContextRefreshedEvent event) {
 		if (event.getApplicationContext().getDisplayName() != "Root WebApplicationContext") return;
+		
+		pairManager.createPairs();
+		providerManager.createProviders();
 	}
 	
 	

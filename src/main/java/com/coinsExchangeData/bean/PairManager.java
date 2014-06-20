@@ -13,7 +13,7 @@ import com.coinsExchangeData.repository.ICoinRepository;
 import com.coinsExchangeData.repository.IPairsRepository;
 
 @Component("pairsManager")
-public class PairsManager {
+public class PairManager {
 	
 	@Autowired
 	private ICoinRepository coinsRepository;

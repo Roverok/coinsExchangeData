@@ -16,7 +16,7 @@ import javax.persistence.Temporal;
 import javax.persistence.TemporalType;
 
 @Entity
-@Table(name="pairs_aggregated")
+@Table(name="pair_aggregated")
 @NamedQueries({ 
 	@NamedQuery(name = "PairAggregatedModel.findByDate", 
 			query = "SELECT pam FROM PairAggregatedModel pam WHERE pam.date = :date"),

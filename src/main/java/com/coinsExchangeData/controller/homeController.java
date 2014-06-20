@@ -34,10 +34,13 @@ public class homeController {
 	private List<AbstractOrder> sellOrders = new ArrayList<AbstractOrder>();
 	private List<AbstractOrder> buyOrders  = new ArrayList<AbstractOrder>();
 	
+	
+	
 	@RequestMapping(value="/heatmap",  method = RequestMethod.GET) 
 	public @ResponseBody HeatMapDTO heatMap() {
 		return heatMapService.getHeatMap();
 	}
+	
 	
 	@PreAuthorize("hasRole('ROLE_USER')")
 	@RequestMapping(value="/permissions",  method = RequestMethod.GET) 

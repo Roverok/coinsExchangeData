@@ -10,7 +10,7 @@ import javax.persistence.NamedQuery;
 import javax.persistence.Table;
 
 @Entity
-@Table(name = "pairs")
+@Table(name = "pair")
 @NamedQueries({ 
 	@NamedQuery(name = "PairModel.findPairBySymbol", query = "SELECT pm FROM PairModel pm WHERE pm.symbol = :symbol"),
 	@NamedQuery(name = "PairModel.findPairByName", query = "SELECT pm FROM PairModel pm WHERE pm.name = :name")

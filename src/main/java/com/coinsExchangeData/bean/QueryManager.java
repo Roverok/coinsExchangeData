@@ -11,6 +11,7 @@ import org.springframework.stereotype.Component;
 
 import com.coinsExchangeData.model.PairAggregatedModel;
 import com.coinsExchangeData.model.PairModel;
+import com.coinsExchangeData.model.ProviderModel;
 
 @Component
 public class QueryManager {
@@ -34,6 +35,12 @@ public class QueryManager {
 		return em.createNamedQuery("PairAggregatedModel.findByDate", PairAggregatedModel.class)
 			.setParameter("date", date, TemporalType.DATE)
 			.getResultList();
+	}
+	
+	public ProviderModel findProviderByName(String name) {
+		return em.createNamedQuery("ProviderModel.findByName", ProviderModel.class)
+			.setParameter("name", name)
+			.getSingleResult();
 	}
 
 }

@@ -7,6 +7,6 @@ import javax.persistence.Table;
 
 @Entity
 @Table(name = "buy_order")
-public class BuyOrder extends AbstractOrder {
+public class BuyOrderModel extends AbstractOrder {
 
 }
